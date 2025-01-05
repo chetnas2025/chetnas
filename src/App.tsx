@@ -3,6 +3,7 @@ import Navbar from "./components/layout/Navbar";
 import Hero from "./components/home/Hero";
 import Features from "./components/home/Features";
 import Contact from "./components/home/Contact";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               </main>
             }
           />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

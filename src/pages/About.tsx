@@ -1,108 +1,165 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { LocalMall, Diamond, Palette, People } from "@mui/icons-material";
 
-const About: React.FC = () => {
+const About = () => {
+  const values = [
+    {
+      icon: <LocalMall className="w-8 h-8" />,
+      title: "Quality First",
+      description:
+        "We source only the finest fabrics and maintain strict quality control to ensure premium products.",
+    },
+    {
+      icon: <Diamond className="w-8 h-8" />,
+      title: "Value for Money",
+      description:
+        "Direct factory prices with no middlemen, ensuring the best wholesale rates for our customers.",
+    },
+    {
+      icon: <Palette className="w-8 h-8" />,
+      title: "Design Excellence",
+      description:
+        "Our designs blend traditional aesthetics with contemporary trends, creating unique and stylish pieces.",
+    },
+    {
+      icon: <People className="w-8 h-8" />,
+      title: "Customer Focus",
+      description:
+        "We build lasting relationships with our clients through exceptional service and reliability.",
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-purple-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-purple-800 mb-6">
-              About Chetna's
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Your trusted destination for premium wholesale Kurtis in Mumbai.
-              We bring you the finest collection of traditional and contemporary
-              designs at competitive prices.
-            </p>
-          </div>
-        </div>
-      </section>
+    <div className="relative min-h-screen bg-black overflow-hidden pt-20">
+      {/* Floral Pattern Overlays */}
+      <div className="absolute top-0 left-0 w-96 h-96 opacity-20">
+        <img
+          src="/src/assets/floral-left.svg"
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
+      <div className="absolute top-0 right-0 w-96 h-96 opacity-20">
+        <img
+          src="/src/assets/floral-right.svg"
+          alt=""
+          className="w-full h-full object-contain"
+        />
+      </div>
 
-      {/* Our Story */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Our Story
-              </h2>
-              <p className="text-gray-600 mb-4">
-                Established with a vision to provide high-quality Kurtis to
-                retailers and businesses, Chetna's has grown to become a trusted
-                name in the wholesale Kurti market.
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center space-y-6 max-w-3xl mx-auto"
+        >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white">
+            About{" "}
+            <span className="italic">
+              Chetna's
+              <span className="text-red-600 font-serif">'</span>
+            </span>
+          </h1>
+          <p className="text-xl text-gray-400 leading-relaxed">
+            Your premier destination for wholesale kurtis in Mumbai, where
+            tradition meets contemporary fashion.
+          </p>
+        </motion.div>
+
+        {/* Story Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
+          <div className="space-y-6">
+            <h2 className="text-3xl font-serif text-white">Our Story</h2>
+            <div className="space-y-4 text-gray-400">
+              <p>
+                Founded with a vision to provide high-quality wholesale kurtis,
+                Chetna's has established itself as a trusted name in Mumbai's
+                fashion industry. Our journey began with a simple mission: to
+                offer premium quality ethnic wear at wholesale prices.
               </p>
-              <p className="text-gray-600 mb-4">
-                We take pride in our carefully curated collection that combines
-                traditional aesthetics with modern fashion trends, ensuring our
-                customers always have access to the latest styles.
+              <p>
+                Over the years, we've built strong relationships with retailers
+                and bulk buyers, understanding their needs and consistently
+                delivering products that exceed expectations. Our commitment to
+                quality, coupled with competitive pricing, has made us a
+                preferred choice for businesses across the region.
               </p>
             </div>
-            <div className="bg-gray-200 h-96 rounded-lg">
-              {/* Add store image here */}
+          </div>
+          <div className="relative">
+            <div className="absolute -inset-px bg-gradient-to-b from-white/5 to-transparent rounded-2xl blur-sm"></div>
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src="/src/assets/Chetnas.jpg"
+                alt="Chetna's Store"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      {/* Our Values */}
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+        {/* Values Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-32"
+        >
+          <h2 className="text-3xl font-serif text-white text-center mb-16">
             Our Values
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="text-purple-600 text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-semibold mb-4">Quality Design</h3>
-              <p className="text-gray-600">
-                We focus on creating designs that blend traditional aesthetics
-                with contemporary fashion
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-purple-600 text-4xl mb-4">👗</div>
-              <h3 className="text-xl font-semibold mb-4">Premium Fabric</h3>
-              <p className="text-gray-600">
-                We use only the highest quality fabrics to ensure comfort and
-                durability
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-purple-600 text-4xl mb-4">💯</div>
-              <h3 className="text-xl font-semibold mb-4">
-                Customer Satisfaction
-              </h3>
-              <p className="text-gray-600">
-                We prioritize our customers' satisfaction with competitive
-                pricing and reliable service
-              </p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                className="relative group"
+              >
+                <div className="absolute -inset-px bg-gradient-to-b from-white/5 to-transparent rounded-2xl blur-sm"></div>
+                <div className="relative h-full p-8 rounded-2xl bg-black border border-white/10 hover:border-white/20 transition-colors duration-300">
+                  <div className="space-y-4">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-white/5 to-transparent p-3 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                      {value.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-red-600 transition-colors duration-300">
+                      {value.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      {/* Call to Action */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-purple-600 rounded-lg shadow-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Start Wholesale Shopping?
-            </h2>
-            <p className="text-purple-100 mb-8">
-              Contact us today to explore our latest collection and wholesale
-              prices
-            </p>
-            <Link
-              to="/contact"
-              className="inline-block bg-white text-purple-600 px-8 py-3 rounded-full hover:bg-purple-50 transition-colors"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </div>
-      </section>
+        {/* Mission Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-32 text-center max-w-3xl mx-auto space-y-6"
+        >
+          <h2 className="text-3xl font-serif text-white">Our Mission</h2>
+          <p className="text-gray-400 leading-relaxed">
+            To provide our customers with the finest quality ethnic wear at
+            competitive wholesale prices while maintaining the highest standards
+            of service and reliability. We strive to be the go-to destination
+            for retailers and bulk buyers looking for premium kurtis that blend
+            traditional aesthetics with contemporary fashion.
+          </p>
+        </motion.div>
+      </div>
     </div>
   );
 };
