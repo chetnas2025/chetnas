@@ -30,8 +30,7 @@ const Contact = () => {
           <h2 className="text-4xl sm:text-5xl font-serif text-white">
             Visit Our{" "}
             <span className="italic">
-              Store
-              <span className="text-red-600 font-serif">.</span>
+              Store<span className="text-red-600 font-serif">.</span>
             </span>
           </h2>
           <p className="text-xl text-gray-400">
@@ -62,20 +61,13 @@ const Contact = () => {
                     </div>
 
                     <address className="text-gray-400 not-italic text-lg space-y-2">
-                      <p className="text-xl font-medium text-white">Chetna's</p>
+                      <p className="text-xl font-medium text-white">
+                        Chetna<span className="text-red-600">'</span>s
+                      </p>
                       <p>Shop no 4, Gemini apt,</p>
                       <p>Marve Rd, Malad West,</p>
                       <p>Mumbai, Maharashtra 400095</p>
                     </address>
-
-                    <a
-                      href="https://maps.app.goo.gl/z4fs4ba6zg6r3LXcA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-8 py-4 bg-white text-black rounded-full hover:bg-gray-100 transform hover:-translate-y-0.5 transition-all duration-200"
-                    >
-                      <LocationOn className="mr-2" /> Get Directions
-                    </a>
 
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-white/5 to-transparent p-3 flex items-center justify-center shrink-0">
@@ -135,6 +127,15 @@ const Contact = () => {
                           <WhatsApp className="mr-2" /> WhatsApp
                         </a>
                       </div>
+
+                      <a
+                        href="https://maps.app.goo.gl/z4fs4ba6zg6r3LXcA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center px-8 py-4 bg-white text-black rounded-full hover:bg-gray-100 transform hover:-translate-y-0.5 transition-all duration-200"
+                      >
+                        <LocationOn className="mr-2" /> Get Directions
+                      </a>
                     </div>
 
                     {/* Alternative Contact */}

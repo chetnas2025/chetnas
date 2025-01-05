@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import { Menu, X } from "@mui/icons-material";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +33,7 @@ const Navbar: React.FC = () => {
               to="/"
               className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent hover:from-purple-500 hover:to-pink-500 transition-all duration-300"
             >
-              Chetna's
+              Chetna<span className="text-red-600">'</span>s
             </Link>
           </div>
 
@@ -66,43 +65,38 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300"
-              aria-label="Toggle menu"
+              className="text-gray-700 hover:text-purple-600 transition-colors duration-300"
             >
-              {isOpen ? <CloseIcon /> : <MenuIcon />}
+              {isOpen ? <X /> : <Menu />}
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden absolute top-full left-0 w-full transform transition-all duration-300 ease-in-out ${
-          isOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-2 pointer-events-none"
-        }`}
-      >
-        <div className="bg-white/95 backdrop-blur-sm shadow-lg px-4 py-3 space-y-2">
-          {[
-            { path: "/", label: "Home" },
-            { path: "/about", label: "About" },
-            { path: "/contact", label: "Contact" },
-          ].map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
-                isActive(item.path)
-                  ? "bg-purple-50 text-purple-600"
-                  : "text-gray-700 hover:bg-purple-50 hover:text-purple-600"
-              }`}
-              onClick={() => setIsOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {[
+                { path: "/", label: "Home" },
+                { path: "/about", label: "About" },
+                { path: "/contact", label: "Contact" },
+              ].map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                    isActive(item.path)
+                      ? "text-purple-600 bg-purple-50"
+                      : "text-gray-700 hover:text-purple-600 hover:bg-purple-50"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

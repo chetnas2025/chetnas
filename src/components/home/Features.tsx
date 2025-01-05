@@ -75,8 +75,7 @@ const Features = () => {
           <h2 className="text-4xl sm:text-5xl font-serif text-white">
             Why Choose{" "}
             <span className="italic">
-              Chetna's
-              <span className="text-red-600 font-serif">'</span>
+              Chetna<span className="text-red-600">'</span>s
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">

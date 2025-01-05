@@ -32,8 +32,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-6">
             <h3 className="text-2xl font-serif italic text-white">
-              Chetna's
-              <span className="text-red-600 font-serif">'</span>
+              Chetna<span className="text-red-600">'</span>s
             </h3>
             <p className="text-gray-400 leading-relaxed">
               Your trusted destination for premium wholesale Kurtis in Mumbai
@@ -151,7 +150,8 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t border-white/10 text-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Chetna's. All rights reserved.
+            &copy; {new Date().getFullYear()} Chetna
+            <span className="text-red-600">'</span>s. All rights reserved.
           </p>
         </div>
       </div>

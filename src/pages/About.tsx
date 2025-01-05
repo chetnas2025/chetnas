@@ -58,8 +58,7 @@ const About = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white">
             About{" "}
             <span className="italic">
-              Chetna's
-              <span className="text-red-600 font-serif">'</span>
+              Chetna<span className="text-red-600">'</span>s
             </span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed">
@@ -80,9 +79,10 @@ const About = () => {
             <div className="space-y-4 text-gray-400">
               <p>
                 Founded with a vision to provide high-quality wholesale kurtis,
-                Chetna's has established itself as a trusted name in Mumbai's
-                fashion industry. Our journey began with a simple mission: to
-                offer premium quality ethnic wear at wholesale prices.
+                Chetna<span className="text-red-600">'</span>s has established
+                itself as a trusted name in Mumbai's fashion industry. Our
+                journey began with a simple mission: to offer premium quality
+                ethnic wear at wholesale prices.
               </p>
               <p>
                 Over the years, we've built strong relationships with retailers
@@ -115,28 +115,24 @@ const About = () => {
           <h2 className="text-3xl font-serif text-white text-center mb-16">
             Our Values
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value) => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 className="relative group"
               >
                 <div className="absolute -inset-px bg-gradient-to-b from-white/5 to-transparent rounded-2xl blur-sm"></div>
-                <div className="relative h-full p-8 rounded-2xl bg-black border border-white/10 hover:border-white/20 transition-colors duration-300">
-                  <div className="space-y-4">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-white/5 to-transparent p-3 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-                      {value.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-red-600 transition-colors duration-300">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {value.description}
-                    </p>
+                <div className="relative p-8 rounded-2xl bg-black border border-white/10 hover:border-white/20 transition-colors duration-300">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-white/5 to-transparent p-3 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                    {value.icon}
                   </div>
+                  <h3 className="text-xl font-bold text-white mt-6 mb-4 group-hover:text-red-600 transition-colors duration-300">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-400">{value.description}</p>
                 </div>
               </motion.div>
             ))}
