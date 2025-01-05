@@ -28,6 +28,14 @@ const Contact = () => {
                   <br />
                   Mumbai, Maharashtra 400095
                 </address>
+                <a
+                  href="https://maps.app.goo.gl/z4fs4ba6zg6r3LXcA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center px-4 py-2 bg-[#4285F4] text-brand-secondary rounded-md hover:bg-opacity-90 transition-all transform hover:scale-105"
+                >
+                  <span className="mr-2">🗺️</span> View on Google Maps
+                </a>
               </div>
               <div className="mt-6">
                 <p className="text-brand-secondary/80">
@@ -43,38 +51,60 @@ const Contact = () => {
               <h3 className="text-xl font-medium text-brand-secondary flex items-center">
                 <span className="text-2xl mr-2">📞</span> Quick Contact
               </h3>
-              <div className="mt-4 space-y-4">
+              <div className="mt-4 space-y-6">
                 <div>
-                  <p className="text-brand-secondary/80 mb-2">
-                    Call or WhatsApp:
-                  </p>
-                  <div className="space-y-2">
-                    <a
-                      href="tel:+919833977850"
-                      className="flex items-center text-3xl font-medium text-brand-accent hover:text-brand-accent/80 transition-colors"
-                    >
-                      +91 98339 77850
-                    </a>
-                    <p className="text-brand-secondary/60 text-sm">
-                      Main Contact
-                    </p>
-                  </div>
-                </div>
-                <div className="flex space-x-4 mt-6">
                   <a
                     href="tel:+919833977850"
-                    className="flex-1 flex items-center justify-center px-6 py-4 text-lg bg-brand-accent text-brand-secondary rounded-md hover:bg-opacity-90 transition-all transform hover:scale-105"
+                    className="flex items-center text-3xl font-medium text-brand-accent hover:text-brand-accent/80 transition-colors"
                   >
-                    <span className="mr-2">📞</span> Call Now
+                    +91 98339 77850
                   </a>
+                  <p className="text-brand-secondary/60 text-sm mb-3">
+                    Main Contact
+                  </p>
+                  <div className="flex space-x-3">
+                    <a
+                      href="tel:+919833977850"
+                      className="flex-1 flex items-center justify-center px-4 py-3 text-base bg-brand-accent text-brand-secondary rounded-md hover:bg-opacity-90 transition-all transform hover:scale-105"
+                    >
+                      <span className="mr-2">📞</span> Call Now
+                    </a>
+                    <a
+                      href="https://wa.me/919833977850"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center px-4 py-3 text-base bg-[#25D366] text-brand-secondary rounded-md hover:bg-opacity-90 transition-all transform hover:scale-105"
+                    >
+                      <span className="mr-2">💬</span> WhatsApp
+                    </a>
+                  </div>
+                </div>
+                <div>
                   <a
-                    href="https://wa.me/919833977850"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center px-6 py-4 text-lg bg-[#25D366] text-brand-secondary rounded-md hover:bg-opacity-90 transition-all transform hover:scale-105"
+                    href="tel:+919930881987"
+                    className="flex items-center text-2xl font-medium text-brand-accent/80 hover:text-brand-accent/60 transition-colors"
                   >
-                    <span className="mr-2">💬</span> WhatsApp
+                    +91 99308 81987
                   </a>
+                  <p className="text-brand-secondary/60 text-sm mb-3">
+                    Alternative Number
+                  </p>
+                  <div className="flex space-x-3">
+                    <a
+                      href="tel:+919930881987"
+                      className="flex-1 flex items-center justify-center px-4 py-3 text-base bg-brand-accent/80 text-brand-secondary rounded-md hover:bg-opacity-90 transition-all transform hover:scale-105"
+                    >
+                      <span className="mr-2">📞</span> Call Now
+                    </a>
+                    <a
+                      href="https://wa.me/919930881987"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center px-4 py-3 text-base bg-[#25D366]/80 text-brand-secondary rounded-md hover:bg-opacity-90 transition-all transform hover:scale-105"
+                    >
+                      <span className="mr-2">💬</span> WhatsApp
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
