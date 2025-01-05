@@ -27,6 +27,14 @@ export default {
       fontFamily: {
         serif: ["Playfair Display", "serif"],
       },
+      keyframes: {
+        shine: {
+          "100%": { transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        shine: "shine 8s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
