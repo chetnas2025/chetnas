@@ -7,16 +7,17 @@ import Contact from "./components/home/Contact";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-brand-primary text-brand-secondary">
+      <div className="min-h-screen bg-black text-brand-secondary">
         <div className="fixed inset-0 -z-10">
+          <div className="absolute inset-0 bg-black opacity-95" />
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 opacity-5"
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(10, 10, 10, 0.97), rgba(10, 10, 10, 0.97)), url('/src/assets/floral-pattern.svg')`,
+              backgroundImage: `url('/src/assets/floral-pattern.svg')`,
               backgroundRepeat: "repeat",
               backgroundSize: "200px",
             }}
-          ></div>
+          />
         </div>
         <Navbar />
         <Routes>
